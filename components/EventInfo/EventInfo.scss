@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+$left-margin: 35%;
+
+.timeline__article.hidden{
+    width: 0px;
+    height: 0;
+    padding: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+
+.timeline__article{
+    position: relative;
+    height: auto;
+    opacity: 1;
+    margin: 0 0 20px $left-margin;
+    padding: 1em;
+    background-color: $brand-color;
+    color: white;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+
+    header{
+        border-bottom: 1px solid white;
+
+        h3{
+            margin: 0 0 10px 0;
+            padding-right: 100px;
+            display: block;
+            width: 25%;
+        }
+    }
+}
+
+.timeline__article:after{
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 10px;
+    right: 100%;
+    pointer-events: none;
+    border: solid transparent;
+    border-right-color: $brand-color;
+    border-width: 10px;
+}
+

@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+/* BEM notation css */
+
+body{
+/* background-color: blue; */
+}
+
+.timeline{
+    width: 600px;
+    list-style-type: none;
+    position: relative;
+    padding: 30px 0 30px 0;
+    margin: auto;
+}
+
+.timeline:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $left-margin;
+    width: 10px;
+    background: #afdcf8;
+    background: linear-gradient(to bottom, $transp 0%, $brand-color--half-transp 8%, $brand-color--half-transp 92%, $transp 100%);
+    margin-left: -10px;
+}
+
+.timeline > li{
+    position: relative;
+}
+
+
