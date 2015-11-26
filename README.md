@@ -33,3 +33,7 @@ Alternatively, you can build a production release to manually deploy to S3, Fire
 ```shell
 $ npm run build release         # Build production release 
 ```
+
+### Screenshot
+
+![Alt text](/screenshots/screenshot.png?raw=true "Screenshot of the timeline")
