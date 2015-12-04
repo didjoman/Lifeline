@@ -7,6 +7,7 @@
 import React, { Component } from 'react';
 //import Lifeline from 'Lifeline';
 import Lifeline from '../components/Lifeline';
+import Lifemap from '../components/Lifemap';
 
 export default class extends Component {
 	
@@ -23,6 +24,7 @@ export default class extends Component {
 		        <h1>Lifeline</h1>
             <p><em>Click on the points to get more details...</em><br /></p>
 		        <Lifeline events={EVENTS} />
+            <Lifemap />
 	      </div> 
 	    );
 	}

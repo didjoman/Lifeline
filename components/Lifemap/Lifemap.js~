@@ -1,0 +1,45 @@
+import React, { Component} from 'react';
+import './Lifemap.scss';
+
+import { render } from 'react-dom';
+//import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+
+//import L from 'leaflet'
+
+class Lifemap extends Component {
+
+
+  render() {
+  // Create globals so leaflet can load
+  GLOBAL.window = {};
+  GLOBAL.document = {
+    documentElement: {
+      style: {}
+    },
+    getElementsByTagName: function() { return []; },
+    createElement: function() { return {}; }
+  };
+  GLOBAL.navigator = {
+    userAgent: 'nodejs'
+  };
+  GLOBAL.L = require('leaflet');
+
+    var map = L.map(document.createElement('div')).setView([52, 4], 10);
+
+    var marker = L.marker([52, 4]).addTo(map);
+
+    // canvas renderer for vector layers:
+    var canvas = L.canvas();
+    var latlngs = [[52, 4], [54, 4], [54, 6], [52, 6], [52, 4]];
+    var polyline = L.polyline(latlngs, {renderer: canvas}).addTo(map);
+
+    const position = [51.505, -0.09];
+
+    return (
+      map
+    );
+  }
+
+}
+
+export default Lifemap;
