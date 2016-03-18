@@ -36,4 +36,4 @@ $ npm run build release         # Build production release
 
 ### Screenshot
 
-![Alt text](/screenshots/screenshot.png?raw=true "Screenshot of the timeline")
+![alt tag](https://cloud.githubusercontent.com/assets/631898/13892698/73f84c3c-ed59-11e5-81ec-4af604879bba.png)
